@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Result</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://demmelearning.com/wp-content/uploads/2024/04/parenting-digital-age.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h1 class="mb-0">Assessment Result</h1>
+            </div>
+            <div class="card-body">
+                <div class="alert {% if result %}alert-danger{% else %}alert-success{% endif %}">
+                    {% if result %}
+                        <h4 class="alert-heading">Mental Health Alert</h4>
+                        <p>The individual may have mental health issues and might need treatment.</p>
+                        <hr>
+                        <h5>Indicators:</h5>
+                        <ul class="list-group">
+                            {% if data['Screen_time'] in ['5-6 hours', '6+ hours'] %}
+                                <li class="list-group-item list-group-item-danger">High screen time: {{ data['Screen_time'] }}</li>
+                            {% endif %}
+                            {% if data['AnxietyAboutMissingUpdates'] == 'Often' %}
+                                <li class="list-group-item list-group-item-danger">Anxiety about missing updates: {{ data['AnxietyAboutMissingUpdates'] }}</li>
+                            {% endif %}
+                            {% if data['DifficultyStopping'] == 'Often' %}
+                                <li class="list-group-item list-group-item-danger">Difficulty stopping usage: {{ data['DifficultyStopping'] }}</li>
+                            {% endif %}
+                            {% if data['StressAnxietyAfterUse'] == 'Often' %}
+                                <li class="list-group-item list-group-item-danger">Stress or anxiety after use: {{ data['StressAnxietyAfterUse'] }}</li>
+                            {% endif %}
+                            {% if data['FrequencyOfSadness'] == 'Often' %}
+                                <li class="list-group-item list-group-item-danger">Frequent sadness: {{ data['FrequencyOfSadness'] }}</li>
+                            {% endif %}
+                            {% if data['TroubleSleeping'] == 'Often' %}
+                                <li class="list-group-item list-group-item-danger">Trouble sleeping: {{ data['TroubleSleeping'] }}</li>
+                            {% endif %}
+                            {% if data['FeelingIsolated'] == 'Often' %}
+                                <li class="list-group-item list-group-item-danger">Feeling isolated: {{ data['FeelingIsolated'] }}</li>
+                            {% endif %}
+                            {% if data['ComparisonToOthers'] == 'Often' %}
+                                <li class="list-group-item list-group-item-danger">Comparison to others: {{ data['ComparisonToOthers'] }}</li>
+                            {% endif %}
+                        </ul>
+                    {% else %}
+                        <h4 class="alert-heading">No Significant Issues</h4>
+                        <p>The individual does not show significant indicators of mental health issues needing treatment.</p>
+                    {% endif %}
+                </div>
+                <a href="/" class="btn btn-primary btn-block">Go back to the form</a>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
