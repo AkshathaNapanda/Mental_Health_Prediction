@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Assessment Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://demmelearning.com/wp-content/uploads/2024/04/parenting-digital-age.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+        }
+        .card-body {
+            max-height: 70vh; /* Adjust the height as needed */
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h1 class="mb-0">Mental Health Assessment Form</h1>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <div class="form-group">
+                        <label for="screen_time">Screen Time:</label>
+                        <select class="form-control" id="screen_time" name="screen_time">
+                            <option value="1-2 hours">1-2 hours</option>
+                            <option value="3-4 hours">3-4 hours</option>
+                            <option value="5-6 hours">5-6 hours</option>
+                            <option value="6+ hours">6+ hours</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="anxiety_about_missing_updates">Anxiety About Missing Updates:</label>
+                        <select class="form-control" id="anxiety_about_missing_updates" name="anxiety_about_missing_updates">
+                            <option value="Never">Never</option>
+                            <option value="Rarely">Rarely</option>
+                            <option value="Sometimes">Sometimes</option>
+                            <option value="Often">Often</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="difficulty_stopping">Difficulty Stopping:</label>
+                        <select class="form-control" id="difficulty_stopping" name="difficulty_stopping">
+                            <option value="Never">Never</option>
+                            <option value="Rarely">Rarely</option>
+                            <option value="Sometimes">Sometimes</option>
+                            <option value="Often">Often</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="stress_anxiety_after_use">Stress/Anxiety After Use:</label>
+                        <select class="form-control" id="stress_anxiety_after_use" name="stress_anxiety_after_use">
+                            <option value="Never">Never</option>
+                            <option value="Rarely">Rarely</option>
+                            <option value="Sometimes">Sometimes</option>
+                            <option value="Often">Often</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency_of_sadness">Frequency of Sadness:</label>
+                        <select class="form-control" id="frequency_of_sadness" name="frequency_of_sadness">
+                            <option value="Never">Never</option>
+                            <option value="Rarely">Rarely</option>
+                            <option value="Sometimes">Sometimes</option>
+                            <option value="Often">Often</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="trouble_sleeping">Trouble Sleeping:</label>
+                        <select class="form-control" id="trouble_sleeping" name="trouble_sleeping">
+                            <option value="Never">Never</option>
+                            <option value="Rarely">Rarely</option>
+                            <option value="Sometimes">Sometimes</option>
+                            <option value="Often">Often</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="feeling_isolated">Feeling Isolated:</label>
+                        <select class="form-control" id="feeling_isolated" name="feeling_isolated">
+                            <option value="Never">Never</option>
+                            <option value="Rarely">Rarely</option>
+                            <option value="Sometimes">Sometimes</option>
+                            <option value="Often">Often</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="comparison_to_others">Comparison to Others:</label>
+                        <select class="form-control" id="comparison_to_others" name="comparison_to_others">
+                            <option value="Never">Never</option>
+                            <option value="Rarely">Rarely</option>
+                            <option value="Sometimes">Sometimes</option>
+                            <option value="Often">Often</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
